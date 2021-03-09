@@ -101,5 +101,26 @@
 
 
 
+
+  //  Chiedere all'utente un valore limite, poi richiedere all'utente una serie di valori
+  //  finche' la somma non supera il valore limite
+  var numInd = prompt('Inserisci un numero per cominciare'); // index number
+  numInd = parseInt(numInd);
+  var sum = 0;
+  // ciclo while
+  while (sum < numInd) {
+
+    var numUser = prompt('Inserisci un numero');
+    numUser = parseInt(numUser);
+    sum += numUser;
+
+  }
+
+  console.log(numInd);
+  console.log(sum);
+
+
+
+
   </script>
 </html>
