@@ -8,11 +8,30 @@
         text-align: center;
         color: red;
       }
+      #rosso {
+        text-align: center;
+        color: red;
+        font-size: 55px;
+      }
+      #verde {
+        text-align: center;
+        color: green;
+        font-size: 55px;
+      }
     </style>
   </head>
   <body>
 
-    <h1 class="til" id="risultato"></h1>
+    <!-- <h1 class="til" id="risultato"></h1> -->
+    <div id="rosso">
+
+    </div>
+
+    <hr>
+
+    <div id="verde">
+
+    </div>
 
   </body>
   <script type="text/javascript">
@@ -104,22 +123,40 @@
 
               //  Chiedere all'utente un valore limite, poi richiedere all'utente una serie di valori
               //  finche' la somma non supera il valore limite
-              
-  var numInd = prompt('Inserisci un numero per cominciare'); // index number
-  numInd = parseInt(numInd);
-  var sum = 0;
-  // ciclo while
-  while (sum < numInd) {
 
-    var numUser = prompt('Inserisci un numero');
-    numUser = parseInt(numUser);
-    sum += numUser;
+  // index number
+  // var numInd = prompt('Inserisci un numero per cominciare');
 
+  // numInd = parseInt(numInd);
+  // var sum = 0;
+  // // ciclo while
+  // while (sum < numInd) {
+  //
+  //   var numUser = prompt('Inserisci un numero');
+  //   numUser = parseInt(numUser);
+  //   sum += numUser;
+  //
+  // }
+  //
+  // console.log('Il numero inserito da indice è: ', numInd);
+  // console.log('Il numero totale della somma è: ', sum);
+
+
+              //  Crea due tag div con due id diversi.
+              //  Un div avrà il testo colorato di rosso mentre l'altro di verde.
+              //  Partendo da un array di numeri, stampiamo nell'id rosso i numeri
+              //  dispari e in verde i numeri pari.
+
+  var numbers = [15, 20, 1, 3, 22, 555, 87, 12, 2];
+  var number;
+  for (var i = 0; i < numbers.length; i++) {
+    number = numbers[i];
+    if (number % 2 == 0) {
+      document.getElementById('verde').innerHTML += number + '<br>';
+    } else {
+      document.getElementById('rosso').innerHTML += number + '<br>';
+    }
   }
-
-  console.log('Il numero inserito da indice è: ', numInd);
-  console.log('Il numero totale della somma è: ', sum);
-
 
 
 
